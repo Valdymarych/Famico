@@ -1,7 +1,16 @@
-.App {
+.taskPage {
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.navbar {
+    display: flex;
+}
+
+.item {
+    margin-left: 10px;
+    margin-right: 10px;
 }
