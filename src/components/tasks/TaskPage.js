@@ -6,9 +6,10 @@ import classes from './TaskPage.module.css';
 let TaskPage = (props) => {
     let { id } = useParams();
     let condition = props.state.conditions[id];
+    let temporaryAnswer = props.state.temporaryAnswers[id];
     return (
         <div className={classes.taskPage}>        
-            <Task condition={condition}></Task>
+            <Task condition={condition}  temporaryAnswer={temporaryAnswer} taskId={id} dispatch={props.dispatch}></Task>
             <Navbar taskCount={props.state.taskCount}></Navbar>
         </div>
 
