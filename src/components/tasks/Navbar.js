@@ -1,20 +1,23 @@
-import classes from './TaskPage.module.css'
-import { NavLink } from "react-router-dom"
+import styles from './TaskPage.module.css'
 let Ref = (props) => {
+    let buttonStyle=styles.navItem;
+    if (props.current===(""+props.text)){
+        buttonStyle=styles.navItem+" "+styles.navItemCurrent
+    }
     return (
-        <div className={classes.item}>
-            <NavLink to={props.address}>{props.index}</NavLink>
+        <div className={styles.navDivItem}>
+            <button className={buttonStyle} onClick={props.onClick}>{props.text}</button>
         </div>
-    );
+    ); 
 }
 let Navbar = (props) => {
     let refs = [];
     for (let i=0; i<props.taskCount;i++){
-        refs.push(<Ref address={"/lucky_shapes/task/"+(i+1)} index={i+1} key={i}></Ref>);
+        refs.push(<Ref onClick={()=>{props.onClickHandler(""+(i+1))}} current={props.taskId} text={i+1} key={i}></Ref>);
     }
     return (
-        <div>
-            <ul className={classes.navbar}>
+        <div className={styles.navb}>
+            <ul className={styles.navbar}>
                 {refs}
             </ul>
         </div>

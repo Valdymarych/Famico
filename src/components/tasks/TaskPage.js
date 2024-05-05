@@ -1,16 +1,13 @@
-import { useParams } from "react-router-dom";
-import Navbar from "./Navbar";
-import Task from "./Task";
+import NavbarContainer from "./NavbarContainer";
+import TaskContainer from "./TaskContainer";
 import classes from './TaskPage.module.css';
 
 let TaskPage = (props) => {
-    let { id } = useParams();
-    let condition = props.state.conditions[id];
-    let temporaryAnswer = props.state.temporaryAnswers[id];
+
     return (
         <div className={classes.taskPage}>        
-            <Task condition={condition}  temporaryAnswer={temporaryAnswer} taskId={id} dispatch={props.dispatch}></Task>
-            <Navbar taskCount={props.state.taskCount}></Navbar>
+            <TaskContainer/>
+            <NavbarContainer/>
         </div>
 
     );

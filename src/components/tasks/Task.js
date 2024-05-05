@@ -1,27 +1,23 @@
 import React from "react"
-import { changeTemporaryAnswerActionCreator } from "../../redux/tasksReducer";
-
+import styles from './TaskPage.module.css'
 
 
 let Task = (props) => {
 
-    
-    let onChangeHandler=()=>{
-        let action = changeTemporaryAnswerActionCreator(temporaryAnswerRef.current.value,props.taskId);
-        props.dispatch(action);
-    }
 
     let temporaryAnswerRef = React.createRef();
 
+    let onChange = () => {props.onChangeHandler(temporaryAnswerRef.current.value);}
+
     return (
-        <div>
-            <div>
+        <>
+            <div className={styles.condition}>
                 <p>{props.condition}</p>
             </div>
-            <div>
-                <input value={props.temporaryAnswer} onChange={onChangeHandler} ref={temporaryAnswerRef}/>
+            <div className={styles.answer}>
+                <input value={props.temporaryAnswer} onChange={onChange} ref={temporaryAnswerRef}/>
             </div>
-        </div>
+        </>
     )
 }
 

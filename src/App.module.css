@@ -5,3 +5,9 @@
     justify-content: center;
     align-items: center;
 }
+
+.page {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}

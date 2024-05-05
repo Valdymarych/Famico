@@ -1,4 +1,5 @@
-import tasksReducer from "./tasksReducer";
+import loginReducer from "./reducers/loginReducer.js";
+import tasksReducer from "./reducers/tasksReducer.js";
 
 let store = {
     _state : {
@@ -32,9 +33,10 @@ let store = {
             },
         
             taskCount : 5,
+        },
+        login: {
+            phoneNumber: "+38 ",
         }
-
-    
     },
     _subscriber (state){
         console.log("state changed!");
@@ -48,9 +50,11 @@ let store = {
 
     dispatch(action) {
         this._state.tasks=tasksReducer(this._state.tasks,action)
+        this._state.login=loginReducer(this._state.login,action)
 
         this._subscriber(this._state);
     }
 
 }
+window.store=store;
 export default store;
