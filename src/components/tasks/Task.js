@@ -15,7 +15,7 @@ let Task = (props) => {
                 <p>{props.condition}</p>
             </div>
             <div className={styles.answer}>
-                <input value={props.temporaryAnswer} onChange={onChange} ref={temporaryAnswerRef}/>
+                <input value={props.temporaryAnswer} onChange={onChange} ref={temporaryAnswerRef}  placeholder="Введіть число"/>
             </div>
         </>
     )

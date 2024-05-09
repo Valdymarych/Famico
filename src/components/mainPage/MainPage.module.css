@@ -1,0 +1,110 @@
+.page {
+    display: grid;
+    padding-right: 20px;
+    padding-left: 20px;
+    grid-template-areas: "header header"
+                         "current ." 
+                         "contest about";
+    grid-template-columns: 5fr 2fr;
+}
+
+.header {
+    grid-area: header;
+    border-bottom: solid;
+    border-bottom-color: green;
+    padding: 10px;
+}
+
+.header_image {
+    height: 40px;
+}
+
+.welcome {
+    
+}
+
+.current {
+    grid-area: current;
+    padding-left: 20px;
+}
+
+.about {
+    padding-left: 30px;
+    border-left-style: solid;
+    border-left-color: green;
+    border-width: 2px;
+
+
+    grid-area: about;
+    display: grid;
+    grid-template-areas:
+        "trin head"
+        ". text";
+    grid-template-columns: 40px 1fr;
+    grid-template-rows: 70px 1fr;
+}
+
+.about_header {
+    grid-area: head;
+    padding-left: 10px;
+    font-size: 25px;
+    padding-top: 20px;
+    font-weight: 700;
+}
+
+.about_text {
+    grid-area: text;
+    padding-right: 20px;
+    font-size: 20px;
+}
+
+.contest {
+    grid-area: contest;
+    padding-right: 10px;
+
+    display: grid;
+    grid-template-areas:
+        "trin head poster"
+        ". content poster";
+    grid-template-columns: 40px 1fr 1fr;
+    grid-template-rows: 70px 1fr;
+}
+
+.contest_header{
+    grid-area: head;
+    padding-left: 10px;
+    font-size: 25px;
+    padding-top: 20px;
+    font-weight: 700;
+}
+
+.contest_content {
+    grid-area: content;
+    padding-right: 20px;
+    font-size: 20px;
+}
+
+.contest_poster {
+    grid-area: poster;
+}
+
+.triangle {
+    grid-area: trin;
+    padding-top: 25px;
+}
+
+.triangle_img{
+    width: 30px;
+}
+
+
+.button_submit{
+    font-size:40px;
+    text-align: center;
+    text-decoration: none;
+    background-color: green;
+    color: #f0ffff;
+    border-radius: 10px;
+    border-color:green;
+    margin-top: 50px;
+ }

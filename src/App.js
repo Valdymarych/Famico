@@ -1,5 +1,4 @@
 import { Routes, Route } from "react-router-dom"
-import ContestPage from "./components/contest/ContestPage";
 import Layout from "./components/Layout";
 import LoginPageContainer from "./components/login/LoginPageContainer";
 import MainPage from "./components/mainPage/MainPage";
@@ -11,7 +10,6 @@ function App(props) {
             <Routes>
                 <Route path="/" element={<Layout/>}>
                     <Route path="/" element={<MainPage/>}/>
-                    <Route path="/lucky_shapes" element={<ContestPage/>}/>
                     <Route path="/lucky_shapes/login" element={<LoginPageContainer/>}/>
                     <Route path="/lucky_shapes/task" element={<TaskPage/>}/>
                 </Route>
