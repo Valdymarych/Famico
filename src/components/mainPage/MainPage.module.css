@@ -1,11 +1,49 @@
-.page {
-    display: grid;
-    padding-right: 20px;
-    padding-left: 20px;
-    grid-template-areas: "header header"
-                         "contest about";
-    grid-template-columns: 5fr 2fr;
+
+@media only screen and (max-width: 2000px) {
+    .border_handler {
+        grid-area: border;
+        border-left-style: solid;
+        border-left-color: green;
+        border-width: 1px;
+    }
+    .page {
+        display: grid;
+        padding-right: 20px;
+        padding-left: 20px;
+        grid-template-areas: "header header"
+                             "contest about";
+        grid-template-columns: 5fr 2fr;
+    }
+    .about_header {
+        grid-area: head;
+        font-size: 55px;
+        font-weight: 300;
+        font-family: system-ui;
+        align-content: center;
+    }
 }
+
+@media only screen and (max-width: 950px) {
+    .border_handler {
+        border: none;
+    }
+    .page {
+        display: flex;
+        flex-direction: column;
+        padding: 0px;
+    }
+    .about_header {
+        grid-area: head;
+        font-size: 55px;
+        font-weight: 300;
+        font-family: system-ui;
+        align-content: center;
+        border-top-style: solid;
+        border-top-color: green;
+        border-width: 1px;
+    }
+}
+
 
 .header {
     grid-area: header;
@@ -35,13 +73,6 @@
     grid-template-rows: 70px 1fr;
 }
 
-.about_header {
-    grid-area: head;
-    font-size: 55px;
-    font-weight: 300;
-    font-family: system-ui;
-    align-content: center;
-}
 
 .about_text {
     grid-area: text;
@@ -106,7 +137,7 @@
     border-radius: 10px;
     border-color: green;
     margin-top: 50px;
-    font-family: cursive;
+    font-family: "Comic Sans", "Comic Sans MS", "Chalkboard", "ChalkboardSE-Regular", sans-serif;
 }
 
 .contest_poster_img {
@@ -116,14 +147,5 @@
 .button_login  {
     background-color: #00386585;
     border-color: rgb(0, 4, 128);
-    font-family: "Comic Sans", "Comic Sans MS", "Chalkboard", "ChalkboardSE-Regular", sans-serif;
 }
 
-.border_handler {
-    
-    grid-area: border;
-    border-left-style: solid;
-    border-left-color: green;
-    border-width: 2px;
-
-}
