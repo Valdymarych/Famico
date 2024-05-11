@@ -113,11 +113,12 @@
     padding: 20px;
 }
 
-.button_login {
+.button_login  {
     background-color: #00386585;
     color: #f0ffff;
-    border-radius: 10px;
+    border-radius: 40px;
     border-color: rgb(0, 4, 128);
+    font-family: "Comic Sans", cursive;
 }
 
 .border_handler {
