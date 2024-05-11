@@ -115,10 +115,8 @@
 
 .button_login  {
     background-color: #00386585;
-    color: #f0ffff;
-    border-radius: 40px;
     border-color: rgb(0, 4, 128);
-    font-family: "Comic Sans", cursive;
+    font-family: "Comic Sans", "Comic Sans MS", "Chalkboard", "ChalkboardSE-Regular", sans-serif;
 }
 
 .border_handler {
