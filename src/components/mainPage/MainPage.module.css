@@ -3,7 +3,6 @@
     padding-right: 20px;
     padding-left: 20px;
     grid-template-areas: "header header"
-                         "current ." 
                          "contest about";
     grid-template-columns: 5fr 2fr;
 }
@@ -16,40 +15,32 @@
 }
 
 .header_image {
-    height: 40px;
+    height: 35px;
 }
 
 .welcome {
     
 }
 
-.current {
-    grid-area: current;
-    padding-left: 20px;
-}
 
 .about {
     padding-left: 30px;
-    border-left-style: solid;
-    border-left-color: green;
-    border-width: 2px;
-
-
+    padding-top: 10px;
     grid-area: about;
     display: grid;
     grid-template-areas:
         "trin head"
-        ". text";
+        "border text";
     grid-template-columns: 40px 1fr;
     grid-template-rows: 70px 1fr;
 }
 
 .about_header {
     grid-area: head;
-    padding-left: 10px;
-    font-size: 25px;
-    padding-top: 20px;
-    font-weight: 700;
+    font-size: 55px;
+    font-weight: 300;
+    font-family: system-ui;
+    align-content: center;
 }
 
 .about_text {
@@ -59,29 +50,33 @@
 }
 
 .contest {
+    padding-top: 10px;
     grid-area: contest;
     padding-right: 10px;
-
     display: grid;
     grid-template-areas:
-        "trin head poster"
+        "trin head head"
         ". content poster";
     grid-template-columns: 40px 1fr 1fr;
     grid-template-rows: 70px 1fr;
 }
 
-.contest_header{
+.contest_header {
     grid-area: head;
     padding-left: 10px;
-    font-size: 25px;
-    padding-top: 20px;
-    font-weight: 700;
+    font-size: 55px;
+    font-weight: 300;
+    align-content: center;
+    font-family: system-ui;
 }
 
 .contest_content {
     grid-area: content;
     padding-right: 20px;
     font-size: 20px;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
 }
 
 .contest_poster {
@@ -98,13 +93,38 @@
 }
 
 
-.button_submit{
-    font-size:40px;
+.button_submit {
+    padding-top: 10px;
+    padding-right: 25px;
+    padding-bottom: 10px;
+    padding-left: 25px;
+    font-size: 25px;
     text-align: center;
     text-decoration: none;
-    background-color: green;
+    background-color: #00650088;
     color: #f0ffff;
     border-radius: 10px;
-    border-color:green;
+    border-color: green;
     margin-top: 50px;
- }
+    font-family: cursive;
+}
+
+.contest_poster_img {
+    padding: 20px;
+}
+
+.button_login {
+    background-color: #00386585;
+    color: #f0ffff;
+    border-radius: 10px;
+    border-color: rgb(0, 4, 128);
+}
+
+.border_handler {
+    
+    grid-area: border;
+    border-left-style: solid;
+    border-left-color: green;
+    border-width: 2px;
+
+}

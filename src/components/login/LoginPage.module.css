@@ -19,11 +19,17 @@
 
 }
 .button_submit{
-   font-size:40px;
-   text-align: center;
-   text-decoration: none;
-   background-color: green;
-   color: #f0ffff;
-   border-radius: 10px;
-   border-color:green;
+    padding-top: 10px;
+    padding-right: 25px;
+    padding-bottom: 10px;
+    padding-left: 25px;
+    font-size: 40px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #006500;
+    color: #f0ffff;
+    border-radius: 10px;
+    border-color: green;
+    margin-top: 50px;
+    font-family: cursive;
 }

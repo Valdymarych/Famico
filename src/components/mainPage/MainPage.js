@@ -11,12 +11,9 @@ let MainPage = (props) => {
                 <img src={famico_text} alt="famico" className={styles.header_image}></img>
             </header>
 
-            <div className={styles.current}>
-                <h1>Актуальний конкурс:</h1>
-            </div>
             <div className={styles.about}>
                 <div className={styles.about_header}>
-                    Про нас: 
+                    Про нас 
                 </div>
                 <div className={styles.triangle}>
                     <img className={styles.triangle_img} src={green_triangle} alt="*"></img>
@@ -27,6 +24,7 @@ let MainPage = (props) => {
                     </div>
                     Текст vb rjvfylf pijpierm g'oinermg'nire'ner'oin'eornco'e rnvoernvojrnveojngr jernbglrjngelrkngtelrkn telrnf verlfn
                 </div>
+                <div className={styles.border_handler}></div>
             </div>
             <div className={styles.contest}>
                 <div className={styles.contest_header}>
@@ -36,17 +34,21 @@ let MainPage = (props) => {
                     <img className={styles.triangle_img} src={green_triangle} alt="*"></img>
                 </div>
                 <div className={styles.contest_content}>
-                    <Link to="/lucky_shapes/login"> Наш перший конкурс lucky_shapes! </Link>
                     
+                    <Link to="/lucky_shapes/login">
+                        <button className={styles.button_submit +  " " + styles.button_login}>
+                            РОЗПОЧАТИ
+                        </button>
+                    </Link>
+
                     <a href="https://www.youtube.com/">
                         <button className={styles.button_submit}>
-                            Реєстрація
+                            РЕЄСТРАЦІЯ
                         </button>
-                        
                     </a>
                 </div>   
                 <div className={styles.contest_poster}>
-                    <img src={poster} alt="poster"></img>
+                    <img src={poster} alt="poster" className={styles.contest_poster_img}></img>
                 </div>             
             </div>
 
