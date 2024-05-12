@@ -19,17 +19,24 @@ let MainPage = (props) => {
                 </div>
                 <div className={styles.contest_content}>
                     
-                    <Link to="/lucky_shapes/login">
-                        <button className={styles.button_submit +  " " + styles.button_login}>
-                            РОЗПОЧАТИ
-                        </button>
-                    </Link>
+                    <div className={styles.button_submit_container}>
+                        <a href="https://forms.gle/NY69hKk1GNQqcGcx7">
+                            <button className={styles.button_submit}>
+                                РЕЄСТРАЦІЯ
+                            </button>
+                        </a>
+                    </div>
 
-                    <a href="https://www.youtube.com/">
-                        <button className={styles.button_submit}>
-                            РЕЄСТРАЦІЯ
-                        </button>
-                    </a>
+                    <div className={styles.button_submit_container+ " "+ styles.button_login_container}>
+                        <Link to="/lucky_shapes/login">
+                            <button className={styles.button_submit +  " " + styles.button_login}>
+                                РОЗПОЧАТИ
+                            </button>
+                        </Link>
+                    </div>
+
+
+
                 </div>   
                 <div className={styles.contest_poster}>
                     <img src={poster} alt="poster" className={styles.contest_poster_img}></img>

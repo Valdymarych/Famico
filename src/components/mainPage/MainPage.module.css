@@ -136,8 +136,8 @@
     color: #f0ffff;
     border-radius: 10px;
     border-color: green;
-    margin-top: 50px;
     font-family: "Comic Sans", "Comic Sans MS", "Chalkboard", "ChalkboardSE-Regular", sans-serif;
+    cursor: pointer;
 }
 
 .contest_poster_img {
@@ -149,3 +149,10 @@
     border-color: rgb(0, 4, 128);
 }
 
+.button_submit_container {
+    margin-top: 50px;
+}
+
+.button_login_container {
+
+}

@@ -2,34 +2,94 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    grid-area: main;
 }
 .registration {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 1rem;
 }
 .image_lucky_shapes{
 	height: 200px;
 	width:500px;
 }
-.phone{
-	font-size:20px;
+.registration_label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-family: system-ui;
+  }
+.registration_input {
+    display: block;
+    width: 100%;
+    height: calc(2.25rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #bdbdbd;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
-.h1_good_luck{
 
+.warning {
+    margin-top: 20px;
+    border-color: #08f11154;
+    border-style: solid;
+    border-width: 2px;
+    padding: 20px 25px;
+    width: 50%;
 }
-.button_submit{
+.good_luck {
+    padding-top: 20px;
+    font-size: 30px;
+    font-weight: 400;
+    font-family: system-ui;
+}
+.button_submit{    
     padding-top: 10px;
     padding-right: 25px;
     padding-bottom: 10px;
     padding-left: 25px;
-    font-size: 40px;
+    font-size: 25px;
     text-align: center;
     text-decoration: none;
-    background-color: #006500;
+    background-color: #00650088;
     color: #f0ffff;
     border-radius: 10px;
     border-color: green;
     margin-top: 50px;
-    font-family: cursive;
+    font-family: "Comic Sans", "Comic Sans MS", "Chalkboard", "ChalkboardSE-Regular", sans-serif;
+    cursor: pointer;
+}
+
+.margin_container {
+    display: grid;
+    grid-template-areas: "left main right";
+    grid-template-columns: 1fr 4fr 1fr;
+    min-height: 100vh;
+    overflow: hidden;
+}
+.margin_left {
+    grid-area: left;
+    border-right-style: solid;
+    border-width: 2px;
+    border-color: green;
+}
+
+.margin_right {
+    grid-area: right;
+    border-left-style: solid;
+    border-width: 2px;
+    border-color: green;
+}
+
+.registration_input_container {
+    width: 100%;
+    display: flex;
 }

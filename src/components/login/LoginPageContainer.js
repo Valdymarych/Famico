@@ -1,13 +1,13 @@
-import { changePhoneNumberActionCreator } from "../../redux/reducers/loginReducer";
+import { changeEmailActionCreator } from "../../redux/reducers/loginReducer";
 import LoginPage from "./LoginPage";
 import { connect } from "react-redux"
 
 let mapStateToProps = (state) => ({
-    phoneNumber : state.login.phoneNumber,
+    email : state.login.email,
 })
 
 let mapDispatchToProps = (dispatch) => ({
-    onPhoneNumberChangeHandler: (value)=>dispatch(changePhoneNumberActionCreator(value))
+    onEmailChangeHandler: (value)=>dispatch(changeEmailActionCreator(value))
 })
 
 const LoginPageContainer = connect(mapStateToProps,mapDispatchToProps)(LoginPage);

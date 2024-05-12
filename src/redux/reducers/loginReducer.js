@@ -1,15 +1,16 @@
-const CHANGE_PHONE_NUMBER="changePhoneNumber";
-
+//const CHANGE_PHONE_NUMBER="changePhoneNumber";
+const CHANGE_EMAIL="changeEmail"
 let initialState = {
     phoneNumber: "+38 ",
+    email: "",
 }
 
 const loginReducer = (state=initialState,action) => {
     switch (action.type){
-        case (CHANGE_PHONE_NUMBER): {
+        case (CHANGE_EMAIL): {
                 let stateCopy = {
                     ...state,
-                    phoneNumber: action.newPhoneNumber,
+                    email: action.newEmail,
                 };
                 return stateCopy;
             }
@@ -19,9 +20,9 @@ const loginReducer = (state=initialState,action) => {
 }
 
 
-export const changePhoneNumberActionCreator = (newPhoneNumber) => ({
-    type: CHANGE_PHONE_NUMBER,
-    newPhoneNumber: newPhoneNumber,
+export const changeEmailActionCreator = (newEmail) => ({
+    type: CHANGE_EMAIL,
+    newEmail: newEmail,
 })
 
 
