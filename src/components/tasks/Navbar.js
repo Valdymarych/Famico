@@ -1,7 +1,7 @@
 import styles from './TaskPage.module.css'
 let Ref = (props) => {
     let buttonStyle=styles.navItem;
-    if (props.current===(""+props.text)){
+    if (props.current==="ok"){
         buttonStyle=styles.navItem+" "+styles.navItemCurrent
     }
     return (
@@ -13,7 +13,7 @@ let Ref = (props) => {
 let Navbar = (props) => {
     let refs = [];
     for (let i=0; i<props.taskCount;i++){
-        refs.push(<Ref onClick={()=>{props.onClickHandler(""+(i+1))}} current={props.taskId} text={i+1} key={i}></Ref>);
+        refs.push(<Ref onClick={()=>{props.onClickHandler(i)}} current={props.taskId===i? "ok": "bad"} text={i+1} key={i}></Ref>);
     }
     return (
         <div className={styles.navb}>

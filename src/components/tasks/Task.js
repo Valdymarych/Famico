@@ -12,7 +12,7 @@ let Task = (props) => {
     return (
         <>
             <div className={styles.condition}>
-                <p>{props.condition}</p>
+                <p>{props.task.condition}</p>
             </div>
             <div className={styles.answer}>
                 <input value={props.temporaryAnswer} onChange={onChange} ref={temporaryAnswerRef}  placeholder="Введіть число"/>

@@ -4,12 +4,12 @@ import {connect} from "react-redux"
 
 
 let mapStateToProps = (state) => ({
-    condition : state.static.conditions[state.tasks.taskId],  
+    task : state.tasks.tasks[state.tasks.taskId],
     temporaryAnswer : state.tasks.temporaryAnswers[state.tasks.taskId],
 })
 
 let mapDispatchToProps = (dispatch) => ({
-    onChangeHandler: (value)=>dispatch(changeTemporaryAnswerActionCreator(value))
+    onChangeHandler: (value)=>dispatch(changeTemporaryAnswerActionCreator(value)),
 })
 
 const TaskContainer = connect(mapStateToProps,mapDispatchToProps)(Task)

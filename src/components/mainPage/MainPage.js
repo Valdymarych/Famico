@@ -53,12 +53,10 @@ let MainPage = (props) => {
                     <div className={styles.welcome}>
                         <h4>Вас вітає Фаміко!</h4>
                     </div>
-                    Текст vb rjvfylf pijpierm g'oinermg'nire'ner'oin'eornco'e rnvoernvojrnveojngr jernbglrjngelrkngtelrkn telrnf verlfn
+                    Famico - це комнада амбітних та креативних учнів Львівського фізико-математичного ліцею, які були переможцями та призерами обласних та всеукраїнських оліміадах з фізики, математики та інформатики. Ми любимо точні науки і хочемо ділитися цією любов'ю з іншими.
                 </div>
                 <div className={styles.border_handler}></div>
             </div>
-
-
 
         </div>
     )

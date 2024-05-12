@@ -3,7 +3,7 @@ import { connect } from "react-redux"
 import { changeTaskIdActionCreator } from '../../redux/reducers/tasksReducer';
 
 let mapStateToProps = (state) => ({
-    taskCount : state.static.taskCount,
+    taskCount : state.tasks.taskCount,
     taskId: state.tasks.taskId
 })
 
