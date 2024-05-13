@@ -4,14 +4,12 @@ import classes from './TaskPage.module.css';
 import axios from "../../axios";
 import React from "react";
 import Preloader from "../commons/Preloader/Preloader";
-import TimerContainer from "../commons/Timer/TimerContainer";
 
 const TaskPageFunc = (props) => {
     return (
-        <div className={classes.taskPage}>        
+        <div className={classes.taskPage}>      
             <TaskContainer/>
             <NavbarContainer/>
-            <TimerContainer/>
         </div> 
 
     )

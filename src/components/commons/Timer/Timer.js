@@ -1,4 +1,5 @@
 import React from "react";
+import styles from './Timer.module.css'
 
 class Timer extends React.Component {
     componentDidMount(){
@@ -9,8 +10,10 @@ class Timer extends React.Component {
     }
     render(){
         return (
-            <div>
-                {this.props.time}
+            <div className={styles.timer_container}>
+                <p className={styles.timer}>
+                    {this.props.time}
+                </p>
             </div>
         )
     }

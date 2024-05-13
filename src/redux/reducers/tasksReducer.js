@@ -6,35 +6,10 @@ const START_TIMER = "startTimer"
 const TICK_TIMER = "tickTimer"
 
 let initialState = {
-    tasks : [
-        {
-            _id : "1",
-            condition: `3. Камінь кинули вертикально вгору. В момент кидання, в т. А камінь мав 
-            кінетичну енергію 30 Дж. Якою буде механічна енергія каменя в верхній точці В 
-            траєкторії польоту? В точці кидання потенціальна енергія каменя рівна нулю. 
-            Опором повітря знехтувати`
-        },
-        {
-            _id : "2",
-            condition: `Віка побудувала вежу з кубиків. На малюнку зображено вигляд цієї вежі 
-            зверху. Кожне число позначає кількість кубиків, покладених один на один у 
-            відповідному стовпчику. Скільки кубиків необхідно докласти до цієї конструкції, 
-            щоб отримати куб 5×5×5?`
-        },
-        {
-            _id : "3",
-            condition: `5. Дві шестерні, на які намотано нитки і прикріплено вантажі, обертаються (див. 
-                мал.). Вкажіть напрям і величину швидкості другого вантажу, якщо перший 
-                рухається вгору зі швидкістю 15м/с (1-вгору,2-вниз).`
-        }
-    ],
+    tasks : [],
     taskCount : 3,
     temporaryAnswers: {
-        "1": "",
-        "2": "",
-        "3": "",
-        "4": "",
-        "5": "",
+
     },
     isFetching: true,
     timer: {
@@ -43,7 +18,7 @@ let initialState = {
         endTime: null,
         duration: 3_600_000, // ms
     },
-    taskId: 0,
+    taskId: null,
 }
 
 const tasksReducer = (state=initialState,action) => {
@@ -66,18 +41,27 @@ const tasksReducer = (state=initialState,action) => {
             stateCopy.taskId=action.newTaskId;
             return stateCopy;
         }
-        case SET_TASKS:
-            return {
+        case SET_TASKS:{
+            let temporaryAnswers = {};
+            for (let i=0;i<action.tasks.length;i++){
+                temporaryAnswers[i]=""
+            }
+            let stateCopy = {
                 ...state,
                 tasks: action.tasks,
-                taskCount: action.tasks.length
+                taskCount: action.tasks.length,
+                temporaryAnswers: temporaryAnswers,
+                taskId: 0
+            }
+            return stateCopy;
         }
+            
         case SET_IS_FETCHING:
             return {
                 ...state,
                 isFetching: action.isFetching
         }
-        case START_TIMER:
+        case START_TIMER: {
             let startTime=(new Date()).getTime();
             let endTime=startTime+state.timer.duration;
             return {
@@ -88,16 +72,28 @@ const tasksReducer = (state=initialState,action) => {
                     endTime: endTime,
                     time: "1:00:00"
                 }
+            }
         }
-        case TICK_TIMER:
+            
+        case TICK_TIMER:{
             let diff_tick=(state.timer.endTime-(new Date()).getTime())/1000;
+            let minutes=Math.floor(diff_tick/60).toString();
+            let seconds=Math.floor(diff_tick-60*Math.floor(diff_tick/60)).toString()
+            if (minutes.length<2){
+                minutes="0"+minutes
+            }
+            if (seconds.length<2){
+                seconds="0"+seconds
+            }
             return {
                 ...state,
                 timer : {
                     ...state.timer,
-                    time: Math.floor(diff_tick/60)+":"+Math.floor(diff_tick-60*Math.floor(diff_tick/60))
+                    time: minutes+":"+seconds
                 }
+            }
         }
+            
         default:
             return state;
     }

@@ -1,0 +1,10 @@
+.timer_container {
+
+}
+
+.timer {
+    margin: 0px;
+    font-size: 40px;
+    color: red;
+    font-weight: 700;
+}

@@ -6,7 +6,7 @@ import TaskPageContainer from "./components/tasks/TaskPageContainer";
 
 function App(props) {
     return (
-        <div className="App" react> 
+        <div className="App"> 
             <Routes>
                 <Route path="/" element={<Layout/>}>
                     <Route path="/" element={<MainPage/>}/>

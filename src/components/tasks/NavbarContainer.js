@@ -4,7 +4,8 @@ import { changeTaskIdActionCreator } from '../../redux/reducers/tasksReducer';
 
 let mapStateToProps = (state) => ({
     taskCount : state.tasks.taskCount,
-    taskId: state.tasks.taskId
+    taskId: state.tasks.taskId,
+    temporaryAnswers: state.tasks.temporaryAnswers
 })
 
 let mapDispatchToProps = (dispatch) => ({
