@@ -3,8 +3,11 @@ import styles from "./MainPage.module.css"
 //import image from "../../images/mainPageHeader.svg"
 import green_triangle from "../../images/triangle.svg"
 import famico_text from "../../images/Famico_navbar.svg"
-import poster from "../../images/poster.JPG"
+import poster from "../../images/poster.PNG"
 let MainPage = (props) => {
+
+    let direction_start = "/lucky_shapes/login"//"/unready"//"/lucky_shapes/login";
+
     return (
         <div className={styles.page}>
             <header className={styles.header}>
@@ -28,7 +31,7 @@ let MainPage = (props) => {
                     </div>
 
                     <div className={styles.button_submit_container+ " "+ styles.button_login_container}>
-                        <Link to="/lucky_shapes/login">
+                        <Link to={direction_start}>
                             <button className={styles.button_submit +  " " + styles.button_login}>
                                 РОЗПОЧАТИ
                             </button>

@@ -1,13 +1,14 @@
 const CHANGE_TEMPORARY_ANSWER="changeTemporaryAnswer";
 const CHANGE_TASK_ID="changeTaskId";
-const SET_TASKS = "setTaks"
+const SET_TASKS = "setTasks"
+const SET_START_TIME = "setStartTime"
 const SET_IS_FETCHING = "setIsFetching"
 const START_TIMER = "startTimer"
 const TICK_TIMER = "tickTimer"
 
 let initialState = {
     tasks : [],
-    taskCount : 3,
+    taskCount : 0,
     temporaryAnswers: {
 
     },
@@ -62,6 +63,9 @@ const tasksReducer = (state=initialState,action) => {
                 isFetching: action.isFetching
         }
         case START_TIMER: {
+            if (state.timer.startTime!=null){
+                return state;
+            }
             let startTime=(new Date()).getTime();
             let endTime=startTime+state.timer.duration;
             return {
@@ -71,6 +75,27 @@ const tasksReducer = (state=initialState,action) => {
                     startTime: startTime,
                     endTime: endTime,
                     time: "1:00:00"
+                }
+            }
+        }
+        case SET_START_TIME: {
+            let endTime=action.startTime+state.timer.duration;
+            let diff_tick=(endTime-(new Date()).getTime())/1000;
+            let minutes=Math.floor(diff_tick/60).toString();
+            let seconds=Math.floor(diff_tick-60*Math.floor(diff_tick/60)).toString()
+            if (minutes.length<2){
+                minutes="0"+minutes
+            }
+            if (seconds.length<2){
+                seconds="0"+seconds
+            }
+            return {
+                ...state,
+                timer: {
+                    ...state.timer,
+                    startTime: action.startTime,
+                    endTime: endTime,
+                    time: minutes+":"+seconds
                 }
             }
         }
@@ -108,6 +133,10 @@ export const changeTemporaryAnswerActionCreator = (newTemporaryAnswer) => ({
 export const changeTaskIdActionCreator = (newTaskId) => ({
     type: CHANGE_TASK_ID,
     newTaskId : newTaskId
+})
+export const setStartTimeActionCreator = (startTime) => ({
+    type: SET_START_TIME,
+    startTime : startTime
 })
 
 export const setTasksActionCreator=(tasks)=>({

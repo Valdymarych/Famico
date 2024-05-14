@@ -1,8 +1,18 @@
 //const CHANGE_PHONE_NUMBER="changePhoneNumber";
 const CHANGE_EMAIL="changeEmail"
+const SET_USER="setUser"
+const WRONG_EMAIL="wrongEmail"
+
 let initialState = {
     phoneNumber: "+38 ",
+    
+    firstname: "{firstname}",
+    lastname: "{lastname}",
+    _id: "{_id}",
+
     email: "",
+    wrongEmail: "",
+    isWrongEmail: false,
 }
 
 const loginReducer = (state=initialState,action) => {
@@ -14,6 +24,27 @@ const loginReducer = (state=initialState,action) => {
                 };
                 return stateCopy;
             }
+        case (WRONG_EMAIL): {
+            let stateCopy = {
+                ...state,
+                email: "",
+                wrongEmail : state.email,
+                isWrongEmail: true,
+            };
+            return stateCopy;
+        }
+        case (SET_USER): {
+            let stateCopy = {
+                ...state,
+                isWrongEmail:false,
+                firstname: action.firstname,
+                lastname: action.lastname,
+                phoneNumber: action.phoneNumber,
+                category: action.category,
+                _id: action._id
+            };
+            return stateCopy;
+        }
         default:
             return state;
     }
@@ -23,6 +54,20 @@ const loginReducer = (state=initialState,action) => {
 export const changeEmailActionCreator = (newEmail) => ({
     type: CHANGE_EMAIL,
     newEmail: newEmail,
+})
+
+export const onWrongEmailActionCreator = () => ({
+    type: WRONG_EMAIL
+})
+
+export const setUserActionCreator = (user) => ({
+    type: SET_USER,
+    firstname: user.firstname,
+    lastname: user.lastname,
+    _id: user._id,
+    phoneNumber: user.phoneNumber,
+    category: user.category
+
 })
 
 

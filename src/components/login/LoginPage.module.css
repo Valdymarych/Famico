@@ -1,19 +1,51 @@
-.main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    grid-area: main;
+@media only screen and (max-width: 2000px) {
+    .main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 80px;
+        grid-area: main;
+    }
+    .image_lucky_shapes{
+        height: 200px;
+        width:500px;
+    }
+    .margin_container {
+        display: grid;
+        grid-template-areas: "left main right";
+        grid-template-columns: 1fr 4fr 1fr;
+        min-height: 100vh;
+        overflow: hidden;
+    }
 }
+
+@media only screen and (max-width: 950px) {
+    .main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 30px;
+        grid-area: main;
+    }
+    .image_lucky_shapes {
+        width: 100%;
+    }
+    .margin_container {
+        display: grid;
+        grid-template-areas: "left main right";
+        grid-template-columns: 1fr 10fr 1fr;
+        min-height: 100vh;
+        overflow: hidden;
+    }
+}
+
 .registration {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 1rem;
 }
-.image_lucky_shapes{
-	height: 200px;
-	width:500px;
-}
+
 .registration_label {
     display: block;
     margin-bottom: 10px;
@@ -68,13 +100,7 @@
     cursor: pointer;
 }
 
-.margin_container {
-    display: grid;
-    grid-template-areas: "left main right";
-    grid-template-columns: 1fr 4fr 1fr;
-    min-height: 100vh;
-    overflow: hidden;
-}
+
 .margin_left {
     grid-area: left;
     border-right-style: solid;
@@ -92,4 +118,12 @@
 .registration_input_container {
     width: 100%;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.registration_wrong_email {
+    font-size: 20px;
+    color: red;
+    font-weight: 700;
 }
