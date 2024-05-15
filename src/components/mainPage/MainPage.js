@@ -6,7 +6,8 @@ import famico_text from "../../images/Famico_navbar.svg"
 import poster from "../../images/poster.PNG"
 let MainPage = (props) => {
 
-    let direction_start = "/lucky_shapes/login"//"/unready"//"/lucky_shapes/login";
+    let direction_start = (new Date()).getTime()>props.startDate? "/lucky_shapes/login" : "/unready";
+    //"/unready"//"/lucky_shapes/login";
 
     return (
         <div className={styles.page}>
@@ -21,9 +22,16 @@ let MainPage = (props) => {
                     <img className={styles.triangle_img} src={green_triangle} alt="*"></img>
                 </div>
                 <div className={styles.contest_content}>
-                    
+                    <div className={styles.contest_content_text}>
+                        <div>
+                            Запрошуємо вас взяти участь в учнівському, фізико-математичному, благодійному конкурсі "Lucky Shapes".
+                        </div>
+                        <div className={styles.contest_content_text_2}>
+                            Отримай насолоду від розвязування цікавезних задач та допоможи розвивати потенціал українських школярів!
+                        </div>
+                    </div>
                     <div className={styles.button_submit_container}>
-                        <a href="https://forms.gle/NY69hKk1GNQqcGcx7">
+                        <a href={props.registrationURL}>
                             <button className={styles.button_submit}>
                                 РЕЄСТРАЦІЯ
                             </button>
@@ -37,8 +45,6 @@ let MainPage = (props) => {
                             </button>
                         </Link>
                     </div>
-
-
 
                 </div>   
                 <div className={styles.contest_poster}>

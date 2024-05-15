@@ -48,7 +48,7 @@ let LoginPageFunc = (props) => {
                     <button className={styles.button_submit} onClick={onContinue}>Розпочати</button>
                 </div>
                 <div className={styles.warning}>
-                    Натискаючи "Розпочати", Ви погоджуєтесь з <a href="https://famico-backend-afc81936fa26.herokuapp.com/uploads/reglament.pdf">правилами</a> проведення конкурсу
+                    Натискаючи "Розпочати", Ви погоджуєтесь з <a href={props.reglamentURL}>правилами</a> проведення конкурсу
                 </div>
             </div>
             <div className={styles.margin_right}></div>

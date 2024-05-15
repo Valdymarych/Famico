@@ -13,6 +13,10 @@ let initialState = {
     email: "",
     wrongEmail: "",
     isWrongEmail: false,
+
+    registrationURL : "https://forms.gle/NY69hKk1GNQqcGcx7",
+    reglamentURL : "https://famico-backend-afc81936fa26.herokuapp.com/uploads/reglament.pdf",
+    startDate :  1716152400000 
 }
 
 const loginReducer = (state=initialState,action) => {

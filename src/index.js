@@ -1,4 +1,3 @@
-
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import store from './redux/reduxStore';
@@ -15,7 +14,7 @@ root.render(
     <>
         <BrowserRouter>
             <Provider store={store}>
-                <App/>
+                <App startDate={store.getState().login.startDate}/>
             </Provider>
         </BrowserRouter>
     </>

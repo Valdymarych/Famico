@@ -90,7 +90,7 @@
         grid-template-areas:
             "trin head"
             "poster poster"
-            ". content";
+            "content content";
         grid-template-columns: 40px 1fr;
         grid-template-rows: 70px 1fr;
         padding-left: 30px;
@@ -98,7 +98,7 @@
     .contest_content {
         align-items: center;
         grid-area: content;
-        padding-right: 70px;
+        padding-right: 10%;
         font-size: 20px;
         padding-top: 20px;
         display: flex;
@@ -122,9 +122,17 @@
         font-family: system-ui;
         font-size: 45px;
     }
+    .contest_content_text {
+        text-align: start;
+        font-size: 20px;
+    }
+
     
 }
 
+.contest_content_text_2 {
+    margin-top: 20px;
+}
 
 .header {
     grid-area: header;
@@ -206,5 +214,5 @@
 }
 
 .button_login_container {
-
+    margin-top: 25px;
 }

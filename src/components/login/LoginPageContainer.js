@@ -6,6 +6,7 @@ let mapStateToProps = (state) => ({
     email : state.login.email,
     wrongEmail: state.login.wrongEmail,
     isWrongEmail: state.login.isWrongEmail,
+    reglamentURL: state.login.reglamentURL
 })
 
 let mapDispatchToProps = (dispatch) => ({
