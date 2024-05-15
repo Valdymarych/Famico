@@ -1,7 +1,7 @@
 import React from "react"
 import styles from './TaskPage.module.css'
 import TimerContainer from "../commons/Timer/TimerContainer";
-import lucky_shapes from "../../images/Lucky_Shapes.svg"
+import lucky_shapes from "../../images/Lucky_shapes.svg"
 import Preloader from "../commons/Preloader/Preloader";
 let Task = (props) => {
 

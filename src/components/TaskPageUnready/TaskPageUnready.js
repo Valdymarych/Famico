@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./TaskPageUnready.module.css"
 import { Link } from "react-router-dom";
-import lucky_shapes from "../../images/Lucky_Shapes.svg"
+import lucky_shapes from "../../images/Lucky_shapes.svg"
 
 const TaskPageUnready = (props) => {
     return (

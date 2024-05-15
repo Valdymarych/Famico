@@ -1,7 +1,7 @@
 import React from "react";
 import {  useNavigate } from "react-router-dom";
 import styles from "./LoginPage.module.css"
-import lucky_shapes from "../../images/Lucky_Shapes.svg"
+import lucky_shapes from "../../images/Lucky_shapes.svg"
 import axios from "../../axios";
 
 
