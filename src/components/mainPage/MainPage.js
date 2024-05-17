@@ -24,7 +24,7 @@ let MainPage = (props) => {
                 <div className={styles.contest_content}>
                     <div className={styles.contest_content_text}>
                         <div>
-                            Запрошуємо вас взяти участь в учнівському, фізико-математичному, благодійному конкурсі "Lucky Shapes".
+                            Запрошуємо вас взяти участь в учнівському, математичному, благодійному конкурсі "Lucky Shapes".
                         </div>
                         <div className={styles.contest_content_text_2}>
                             Отримай насолоду від розвязування цікавезних задач та допоможи розвивати потенціал українських школярів!

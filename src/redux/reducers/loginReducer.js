@@ -16,7 +16,7 @@ let initialState = {
 
     registrationURL : "https://forms.gle/NY69hKk1GNQqcGcx7",
     reglamentURL : "https://famico-backend-afc81936fa26.herokuapp.com/uploads/reglament.pdf",
-    startDate :  1716152400000 
+    startDate :  1816152400000+30000//1716152400000 
 }
 
 const loginReducer = (state=initialState,action) => {
