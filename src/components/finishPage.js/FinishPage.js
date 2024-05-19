@@ -36,7 +36,7 @@ class FinishPage extends React.Component {
             data : data,
         }).then(
             (res) => {
-
+                this.props.logOut()
             }
         ).catch(
             (err) => {

@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router-dom"
 import ContestLayout from "./components/ContestLayout";
+import FinishLayout from "./components/FinishLayout";
 import FinishPageContainer from "./components/finishPage.js/FinishPageContainer";
 import Layout from "./components/Layout";
 import LoginPageContainer from "./components/login/LoginPageContainer";
@@ -19,6 +20,8 @@ function App(props) {
                         <Route path="/lucky_shapes/login" element={<LoginPageContainer/>}/>
                         <Route path="/lucky_shapes/rules" element={<TaskRulesContainer/>}/>
                         <Route path="/lucky_shapes/task" element={<TaskPageContainer/>}/>
+                    </Route>
+                    <Route path="/lucky_shapes/" element={<FinishLayout/>}>
                         <Route path="/lucky_shapes/finish" element={<FinishPageContainer/>}/>
                     </Route>
                 </Route>
