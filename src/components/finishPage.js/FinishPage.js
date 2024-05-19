@@ -1,21 +1,16 @@
 import React from "react";
 import styles from "./FinishPage.module.css"
-import lucky_shapes from "../../images/Lucky_shapes.svg"
 import axios from "../../axios";
+import Page from "../commons/page/Page";
 
 const FinishPageFunc = (props) => {
     return (
-        <div className={styles.margin_container}> 
-            <div className={styles.margin_left}></div>
-            <div className={styles.main}>
-                <img src = {lucky_shapes} alt="Lucky Shapes" className={styles.image_lucky_shapes}/>
-                <div className={styles.info1}>
+        <Page>
+            <div className={styles.info1}>
                     Ви завершили участь в конкурсі!
                     Ваші результати було записано
-                </div>
             </div>
-            <div className={styles.margin_right}></div>
-        </div>
+        </Page>
     )
 }
 

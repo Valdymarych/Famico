@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./TaskRules.module.css"
 import {  useNavigate } from "react-router-dom";
 import axios from "../../axios";
-import lucky_shapes from "../../images/Lucky_shapes.svg"
+import Page from "../commons/page/Page";
 
 const TaskRules = (props) => {
     let navigate = useNavigate();
@@ -52,17 +52,11 @@ const TaskRules = (props) => {
         })  
     }
     return (
-        <div className={styles.margin_container}> 
-            <div className={styles.margin_left}></div>
-            <div className={styles.main}>
-                <img src = {lucky_shapes} alt="Lucky Shapes" className={styles.image_lucky_shapes}/>
-                <div>
-                    <button className={styles.button_submit} onClick={onStart}>Почати</button>
-                </div>
-
+        <Page>
+            <div>
+                <button className={styles.button_submit} onClick={onStart}>Почати</button>
             </div>
-            <div className={styles.margin_right}></div>
-        </div>
+        </Page>
     )
 }
 
