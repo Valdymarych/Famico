@@ -13,6 +13,7 @@ let initialState = {
     email: "",
     wrongEmail: "",
     isWrongEmail: false,
+    isRegistred: false,
 
     registrationURL : "https://docs.google.com/forms/d/e/1FAIpQLSfyaxtE_O9c8AjgRlqpD88ASFGHqphBIrOTl__Now50_7INMw/viewform",
     reglamentURL : "https://famico-backend-afc81936fa26.herokuapp.com/uploads/reglament.pdf",
@@ -45,7 +46,8 @@ const loginReducer = (state=initialState,action) => {
                 lastname: action.lastname,
                 phoneNumber: action.phoneNumber,
                 category: action.category,
-                _id: action._id
+                _id: action._id,
+                isRegistred: true,
             };
             return stateCopy;
         }

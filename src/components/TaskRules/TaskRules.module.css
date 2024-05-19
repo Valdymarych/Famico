@@ -14,3 +14,42 @@
     font-family: "Comic Sans", "Comic Sans MS", "Chalkboard", "ChalkboardSE-Regular", sans-serif;
     cursor: pointer;
 }
+
+.greeting {
+    font-size: 40px;
+}
+
+.paragraph_1 {
+    font-size: 25px;
+}
+
+
+.paragraph_2 {
+    padding-left: 30px;
+    font-size: 25px;
+}
+.paragraph_2_header {
+
+}
+.paragraph_2_list {
+    margin-top: 5px;
+}
+.paragraph_2_item {
+    font-size: 0.75em;
+}
+
+.paragraph_3 {
+    padding-left: 30px;
+    font-size: 25px;
+    color: red;
+    font-weight: 600;
+}
+.paragraph_3_header {
+
+}
+.paragraph_3_list {
+    margin-top: 5px;
+}
+.paragraph_3_item {
+    font-size: 0.75em;
+}

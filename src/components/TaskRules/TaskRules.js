@@ -54,6 +54,34 @@ const TaskRules = (props) => {
     return (
         <Page>
             <div>
+                <div className={styles.greeting}>
+                    Вітаємо {props.name}!
+                </div>
+                <div className={styles.paragraph_2}>
+                    <div className={styles.paragraph_2_header}>
+                        Завдання оцінюються наступним чином:
+                    </div>
+                    <ul className={styles.paragraph_2_list}>
+                        <li className={styles.paragraph_2_item}>1-7 завдання - 1 бал</li>
+                        <li className={styles.paragraph_2_item}>8-15 завдання - 2 бали</li>
+                        <li className={styles.paragraph_2_item}>16-20 завдання - 3 бали</li>
+                    </ul>
+                </div>
+                <div  className={styles.paragraph_3}>
+                    <div  className={styles.paragraph_3_header}>
+                        Правила:
+                    </div>
+                    <ul  className={styles.paragraph_3_list}>
+                        <li className={styles.paragraph_3_item}>Заборонено використовувати сторонні джерела інформації</li>
+                        <li className={styles.paragraph_3_item}>Заборонено використання калькулятора чи допоміжних програм</li>
+                        <li className={styles.paragraph_3_item}>Заборонено фотографування завдань під час проходження конкурсу</li>
+                    </ul>
+                </div>
+                <div className={styles.paragraph_1}>
+                    На виконання завдань дається 1 година, після вичерпання часу конкурс автоматично завершується
+                </div>
+            </div>
+            <div>
                 <button className={styles.button_submit} onClick={onStart}>Почати</button>
             </div>
         </Page>

@@ -9,8 +9,6 @@ import TaskRulesContainer from "./components/TaskRules/TaskRulesContainer";
 import TaskPageContainer from "./components/tasks/TaskPageContainer";
 
 function App(props) {
-    console.log((new Date()).getTime());
-
     return (
         <div className="App" > 
             <Routes>
