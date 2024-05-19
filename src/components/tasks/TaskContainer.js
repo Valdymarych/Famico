@@ -6,7 +6,8 @@ import {connect} from "react-redux"
 let mapStateToProps = (state) => ({
     tasks : state.tasks.tasks,
     temporaryAnswers : state.tasks.temporaryAnswers,
-    taskId : state.tasks.taskId
+    taskId : state.tasks.taskId,
+    taskCount: state.tasks.taskCount
 })
 
 let mapDispatchToProps = (dispatch) => ({

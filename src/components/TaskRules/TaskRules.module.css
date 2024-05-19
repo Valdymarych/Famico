@@ -1,3 +1,60 @@
+@media only screen and (max-width: 2000px) {
+    .main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10%;
+        grid-area: main;
+    }
+    .image_lucky_shapes{
+        height: fit-content;
+        margin-bottom: 50px;
+        margin-top: 50px;
+        width:500px;
+    }
+    .margin_container {
+        display: grid;
+        grid-template-areas: "left main right";
+        grid-template-columns: 1fr 4fr 1fr;
+        min-height: 100vh;
+        overflow: hidden;
+    }
+}
+
+@media only screen and (max-width: 950px) {
+    .main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 5%;
+        grid-area: main;
+    }
+    .image_lucky_shapes {
+        width: 100%;
+    }
+    .margin_container {
+        display: grid;
+        grid-template-areas: "left main right";
+        grid-template-columns: 1fr 20fr 1fr;
+        min-height: 100vh;
+        overflow: hidden;
+    }
+}
+
+.reglament {
+    font-size: 25px;
+    margin-top: 20px;
+    border-color: #08f11154;
+    border-style: solid;
+    border-width: 2px;
+    padding: 20px 25px;
+    width: fit-content;
+}
+
+.reglament_a {
+    text-decoration: none;
+}
+
 .button_submit{    
     padding-top: 10px;
     padding-right: 25px;
@@ -13,4 +70,39 @@
     margin-top: 50px;
     font-family: "Comic Sans", "Comic Sans MS", "Chalkboard", "ChalkboardSE-Regular", sans-serif;
     cursor: pointer;
+}
+
+
+.margin_left {
+    grid-area: left;
+    border-right-style: solid;
+    border-width: 2px;
+    border-color: green;
+}
+
+.margin_right {
+    grid-area: right;
+    border-left-style: solid;
+    border-width: 2px;
+    border-color: green;
+}
+
+.info1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem;
+    font-size: 20px;
+}
+
+.info2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem;
+    font-size: 20px;
+}
+
+.info2_a {
+    text-decoration: none;
 }

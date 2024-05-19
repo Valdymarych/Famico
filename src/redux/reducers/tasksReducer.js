@@ -17,7 +17,7 @@ let initialState = {
         time: null,
         startTime: null,
         endTime: null,
-        duration: 3_600_000, // ms
+        duration: 30_000, // ms
     },
     taskId: null,
 }

@@ -3,6 +3,7 @@ import styles from './TaskPage.module.css'
 import TimerContainer from "../commons/Timer/TimerContainer";
 import lucky_shapes from "../../images/Lucky_shapes.svg"
 import Preloader from "../commons/Preloader/Preloader";
+import { Link } from "react-router-dom";
 let Task = (props) => {
 
 
@@ -14,6 +15,13 @@ let Task = (props) => {
         )
     }
 
+    let finishButton = (
+        <Link to="/lucky_shapes/finish">
+            <button>
+                Завершити
+            </button>
+        </Link>
+    )
     return (
         <>
             <header className={styles.header}>
@@ -33,6 +41,7 @@ let Task = (props) => {
                     Час до завершення
                 </div>
                 <TimerContainer/>
+                {(props.taskId===props.taskCount-1)? finishButton: null}
             </div>
 
             <div className={styles.answer}>
