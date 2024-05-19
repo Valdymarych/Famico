@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./TaskPageUnready.module.css"
 import { Link } from "react-router-dom";
 import Page from "../commons/page/Page";
+import PrettyButton from "../commons/prettyButton/PrettyButton";
 
 const TaskPageUnready = (props) => {
     return (
@@ -15,10 +16,10 @@ const TaskPageUnready = (props) => {
             <div className={styles.reglament}>
                 <a href={props.reglamentURL} className={styles.reglament_a}>Регламент конкурсу</a>
             </div>
-            <div>
-                <Link to="/">
-                    <button className={styles.button_submit}>Назад</button>
-                </Link>
+            <div className={styles.button_container}>
+                <PrettyButton type="link" to="/">
+                    Назад
+                </PrettyButton>
             </div>
         </Page>
     )

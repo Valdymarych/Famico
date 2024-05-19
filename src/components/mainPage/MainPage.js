@@ -4,6 +4,7 @@ import styles from "./MainPage.module.css"
 import green_triangle from "../../images/triangle.svg"
 import famico_text from "../../images/Famico_navbar.svg"
 import poster from "../../images/poster.PNG"
+import PrettyButton from "../commons/prettyButton/PrettyButton";
 let MainPage = (props) => {
 
     let direction_start = (new Date()).getTime()>props.startDate? "/lucky_shapes/login" : "/unready";
@@ -31,19 +32,15 @@ let MainPage = (props) => {
                         </div>
                     </div>
                     <div className={styles.button_submit_container}>
-                        <a href={props.registrationURL}>
-                            <button className={styles.button_submit}>
-                                РЕЄСТРАЦІЯ
-                            </button>
-                        </a>
+                        <PrettyButton type="a" href={props.registrationURL}>
+                            РЕЄСТРАЦІЯ
+                        </PrettyButton>
                     </div>
 
                     <div className={styles.button_submit_container+ " "+ styles.button_login_container}>
-                        <Link to={direction_start}>
-                            <button className={styles.button_submit +  " " + styles.button_login}>
-                                РОЗПОЧАТИ
-                            </button>
-                        </Link>
+                        <PrettyButton type="link" to={direction_start} style={{backgroundColor: "#00386585", borderColor: "rgb(0, 4, 128)"}}>
+                            РОЗПОЧАТИ
+                        </PrettyButton>
                     </div>
 
                 </div>   

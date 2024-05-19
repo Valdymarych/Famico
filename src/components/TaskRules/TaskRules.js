@@ -3,6 +3,7 @@ import styles from "./TaskRules.module.css"
 import {  useNavigate } from "react-router-dom";
 import axios from "../../axios";
 import Page from "../commons/page/Page";
+import PrettyButton from "../commons/prettyButton/PrettyButton";
 
 const TaskRules = (props) => {
     let navigate = useNavigate();
@@ -81,8 +82,10 @@ const TaskRules = (props) => {
                     На виконання завдань дається 1 година, після вичерпання часу конкурс автоматично завершується
                 </div>
             </div>
-            <div>
-                <button className={styles.button_submit} onClick={onStart}>Почати</button>
+            <div className={styles.button_container}>
+                <PrettyButton onClick={onStart}>
+                    Почати
+                </PrettyButton>
             </div>
         </Page>
     )

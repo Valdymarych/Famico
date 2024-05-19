@@ -2,13 +2,18 @@ import React from "react";
 import styles from "./FinishPage.module.css"
 import axios from "../../axios";
 import Page from "../commons/page/Page";
-
+import { Link } from "react-router-dom"
 const FinishPageFunc = (props) => {
     return (
         <Page>
             <div className={styles.info1}>
-                    Ви завершили участь в конкурсі!
-                    Ваші результати було записано
+                Ваші результати записано!
+            </div>
+            <div className={styles.info1}>
+                Дякуюємо що взяли участь в конкурсі
+            </div>
+            <div className={styles.info2}>
+                Остаточні результати будуть доступні на <Link to="/">головній сторінці</Link> 24 травня
             </div>
         </Page>
     )

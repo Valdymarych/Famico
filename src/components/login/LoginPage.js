@@ -3,6 +3,7 @@ import {  useNavigate } from "react-router-dom";
 import styles from "./LoginPage.module.css"
 import axios from "../../axios";
 import Page from "../commons/page/Page";
+import PrettyButton from "../commons/prettyButton/PrettyButton";
 
 
 let LoginPageFunc = (props) => {
@@ -41,8 +42,10 @@ let LoginPageFunc = (props) => {
                 </div>
                 <div className={styles.good_luck}>Успіхів!</div>
             </div>
-            <div>
-                <button className={styles.button_submit} onClick={onContinue}>Розпочати</button>
+            <div className={styles.button_container}>
+                <PrettyButton onClick={onContinue}>
+                    Розпочати
+                </PrettyButton>
             </div>
             <div className={styles.warning}>
                 Натискаючи "Розпочати", Ви погоджуєтесь з <a href={props.reglamentURL}>правилами</a> проведення конкурсу

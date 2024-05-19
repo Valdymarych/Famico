@@ -147,11 +147,6 @@
     height: 35px;
 }
 
-.welcome {
-    
-}
-
-
 .about {
     padding-left: 30px;
     padding-top: 10px;
@@ -171,12 +166,6 @@
     font-size: 20px;
 }
 
-
-
-
-
-
-
 .triangle {
     grid-area: trin;
     padding-top: 25px;
@@ -184,29 +173,6 @@
 
 .triangle_img{
     width: 30px;
-}
-
-
-.button_submit {
-    padding-top: 10px;
-    padding-right: 25px;
-    padding-bottom: 10px;
-    padding-left: 25px;
-    font-size: 25px;
-    text-align: center;
-    text-decoration: none;
-    background-color: #00650088;
-    color: #f0ffff;
-    border-radius: 10px;
-    border-color: green;
-    font-family: "Comic Sans", "Comic Sans MS", "Chalkboard", "ChalkboardSE-Regular", sans-serif;
-    cursor: pointer;
-}
-
-
-.button_login  {
-    background-color: #00386585;
-    border-color: rgb(0, 4, 128);
 }
 
 .button_submit_container {
