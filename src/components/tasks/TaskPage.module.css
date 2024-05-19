@@ -6,7 +6,7 @@
         "cond timer"
         "cond answer"
         "nav nav";
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 3fr 1fr;
     grid-template-rows: 70px 1fr 1fr 70px;
 }
 
@@ -28,12 +28,23 @@
     -webkit-user-select: none; 
     user-select: none; 
     border-style: solid;
-    width: 60%;
+    width: 40%;
+}
+
+.condition_without_img {
+    margin: 30px;
+    padding: 20px;
+    -ms-user-select: none; 
+    -moz-user-select: none; 
+    -webkit-user-select: none; 
+    user-select: none; 
+    border-style: solid;
+    width: 80%;
 }
 
 .condition_img {
-    width: 200px;
-    height: fit-content;
+    width: fit-content;
+    max-height: 450px;
 }
 
 .answer {
@@ -138,5 +149,23 @@
     justify-content: flex-start;
     flex-wrap: wrap;
     margin-top: 20px;
+    margin-right: 20px;
+}
+
+.finish_button {
+    margin-top: 50px;
+    padding-top: 10px;
+    padding-right: 25px;
+    padding-bottom: 10px;
+    padding-left: 25px;
+    font-size: 25px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #d20000b3;
+    color: #ffffff;
+    border-radius: 0px;
+    border-color: #560000;
+    font-family: sans-serif;
+    cursor: pointer;
     margin-right: 20px;
 }

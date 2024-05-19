@@ -7,7 +7,8 @@ let mapStateToProps = (state) => ({
     tasks : state.tasks.tasks,
     temporaryAnswers : state.tasks.temporaryAnswers,
     taskId : state.tasks.taskId,
-    taskCount: state.tasks.taskCount
+    taskCount: state.tasks.taskCount,
+    taskPhotoURL : state.tasks.taskPhotoURL
 })
 
 let mapDispatchToProps = (dispatch) => ({

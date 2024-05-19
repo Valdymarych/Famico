@@ -17,24 +17,27 @@ let Task = (props) => {
 
     let finishButton = (
         <Link to="/lucky_shapes/finish">
-            <button>
+            <button className={styles.finish_button}>
                 Завершити
             </button>
         </Link>
     )
+    let conditionClassName = props.tasks[props.taskId].photoFilename? styles.condition : styles.condition_without_img
+    let photo = props.tasks[props.taskId].photoFilename? (
+        <img src={props.taskPhotoURL+props.tasks[props.taskId].photoFilename} alt="умова..." className={styles.condition_img}/>
+    ) : null
+    console.log(props.tasks[props.taskId].photoFilename);
+    console.log(props.taskPhotoURL+props.tasks[props.taskId].photoFilename);
     return (
         <>
             <header className={styles.header}>
                 <img src={lucky_shapes} alt="lucky shapes" className={styles.header_image}></img>
             </header>
             <div className={styles.condition_container}>
-                <p className={styles.condition}>
-                    Третину шляху гелікоптер пролетів 
-                    зі швидкістю 320 км/год, 
-                    а дві третини – з швидкістю 160 км/год. 
-                    Яка середня швидкість на всьому шляху?
+                <p className={conditionClassName}>
+                    {props.tasks[props.taskId].condition}
                 </p>
-                <img src="http://localhost:3001/uploads/conditions/condition_1.JPG" alt="умова..." className={styles.condition_img}/>
+                {photo}
             </div>
             <div className={styles.timer_description_container}>
                 <div className={styles.timer_description}>

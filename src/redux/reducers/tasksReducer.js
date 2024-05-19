@@ -1,3 +1,4 @@
+import { baseURL } from "../../axios";
 const CHANGE_TEMPORARY_ANSWER="changeTemporaryAnswer";
 const CHANGE_TASK_ID="changeTaskId";
 const SET_TASKS = "setTasks"
@@ -17,9 +18,10 @@ let initialState = {
         time: null,
         startTime: null,
         endTime: null,
-        duration: 30_000, // ms
+        duration: 100_000_000, // ms
     },
     taskId: null,
+    taskPhotoURL: baseURL+"uploads/conditions/"
 }
 
 const tasksReducer = (state=initialState,action) => {
