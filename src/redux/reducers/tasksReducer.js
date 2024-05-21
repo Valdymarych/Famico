@@ -18,7 +18,7 @@ let initialState = {
         time: null,
         startTime: null,
         endTime: null,
-        duration: 100_000_000, // ms
+        duration: 3600*1000, // ms
     },
     taskId: null,
     taskPhotoURL: baseURL+"uploads/conditions/"
