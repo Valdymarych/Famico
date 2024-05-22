@@ -66,6 +66,7 @@ const TaskRules = (props) => {
                         <li className={styles.paragraph_2_item}>1-7 завдання - 1 бал</li>
                         <li className={styles.paragraph_2_item}>8-15 завдання - 2 бали</li>
                         <li className={styles.paragraph_2_item}>16-20 завдання - 3 бали</li>
+                        <li className={styles.paragraph_2_item}>Завдання з багатьма варіантами відповіді перевіряються вручну, просимо писати відповідь зрозумілою для людей!</li>
                     </ul>
                 </div>
                 <div  className={styles.paragraph_3}>
