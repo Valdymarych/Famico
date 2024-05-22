@@ -45,6 +45,7 @@
 .condition_img {
     width: fit-content;
     max-height: 450px;
+    max-width: 500px;
 }
 
 .answer {
