@@ -23,12 +23,22 @@ class FinishPage extends React.Component {
     componentDidMount() {
         let data = [];
         for (let i=0;i<this.props.taskCount;i++){
-            data.push(
-                {
-                    taskId: this.props.tasks[i]._id,
-                    answer: this.props.answers[i]
-                }
-            )
+            if (this.props.answers[i]){
+                data.push(
+                    {
+                        taskId: this.props.tasks[i]._id,
+                        answer: this.props.answers[i]
+                    }
+                )
+            } else {
+                data.push(
+                    {
+                        taskId: this.props.tasks[i]._id,
+                        answer: "null!"
+                    }
+                )
+            }
+
         }
         axios.post('/api/results',
         {
