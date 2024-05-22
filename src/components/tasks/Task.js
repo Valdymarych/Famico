@@ -26,8 +26,7 @@ let Task = (props) => {
     let photo = props.tasks[props.taskId].photoFilename? (
         <img src={props.taskPhotoURL+props.tasks[props.taskId].photoFilename} alt="умова..." className={styles.condition_img}/>
     ) : null
-    console.log(props.tasks[props.taskId].photoFilename);
-    console.log(props.taskPhotoURL+props.tasks[props.taskId].photoFilename);
+
     return (
         <>
             <header className={styles.header}>
