@@ -21,6 +21,9 @@ let initialState = {
 
     registrationURL : "https://docs.google.com/forms/d/e/1FAIpQLSfyaxtE_O9c8AjgRlqpD88ASFGHqphBIrOTl__Now50_7INMw/viewform",
     reglamentURL : "https://famico-backend-afc81936fa26.herokuapp.com/uploads/reglament.pdf",
+    resultsURL1 : "https://famico-backend-afc81936fa26.herokuapp.com/uploads/results1.pdf",
+    resultsURL2 : "https://famico-backend-afc81936fa26.herokuapp.com/uploads/results2.pdf",
+    resultsURL3 : "https://famico-backend-afc81936fa26.herokuapp.com/uploads/results3.pdf",
     startDate :  1716325200000//1716152400000 
 }
 
